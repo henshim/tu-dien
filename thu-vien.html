@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id ="result">
+    <input type="button" id ="search" value="search" onclick="check()">
+</form>
+<p id = "end"></p>
+<script>
+    function check(){
+        let english = ["hello","one","two","goodbye","good morning","cat","dog"];
+        let vietnamese = ["xin chao","1","2","tam biet", "chao buoi sang","cho","meo"];
+        let x = document.getElementById("result").value;
+        let y;
+        for(let i =0;i< vietnamese.length;i++){
+            if ( x=== english[i]){
+                y = vietnamese[i];
+            }
+            document.getElementById("end").innerHTML = y ;
+        }
+    }
+</script>
+
+</body>
+</html>
